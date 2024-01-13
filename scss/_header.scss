@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    z-index: 1000;
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px 60px;
+
+        .navigation {
+            display: flex;
+            width: 100%;
+            max-width: 345px;
+            justify-content: space-between;
+            list-style-type: none;
+            li {
+                cursor: pointer;
+                padding: 33px 15px 30px;
+                &:hover {
+                    background: #F1F1F1;
+                    color: #FC0000;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .header {
+        .container {
+            .navigation {
+                display: none;
+            }
+        }
+    }
+}

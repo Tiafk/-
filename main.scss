@@ -1,0 +1,33 @@
+@import './scss/header';
+@import './scss/bikepage';
+@import './scss/video';
+@import './scss/pageslider';
+@import './scss/formPage';
+@import './scss/footer';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background:#F1E7D4;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'soviet';
+    src: url('./fonts/Soviet\ Font.ttf');
+    font-style: normal;
+    font-weight: normal;
+}

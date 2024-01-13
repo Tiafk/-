@@ -1,0 +1,128 @@
+.video_slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    display: flex;
+    min-width: 0;
+    max-height: 100%;
+    top: 0;
+    background: #FC0000;
+    z-index: 60; 
+    .slider {
+        // max-height: 800px;
+        height: 100vh;
+    }
+    .image-slider {
+        &__slide {
+            display: flex;
+            min-width: 572px;
+            max-height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__video_container {
+            position: relative;
+            svg {
+                cursor: pointer;
+                position: absolute;
+                bottom: -67px;
+                right: -67px;
+                z-index: 1001;
+                transition: .2s ease;
+
+                &:hover {
+                    circle {
+                        stroke: #FC0000;
+                        transition: .2s ease;
+                    }
+                    path {
+                        fill: #FC0000;
+                        transition: .2s ease;
+                    }
+                }
+
+                &:active {
+                    circle {
+                        stroke: #B90303;
+                        transition: .3s ease;
+                    }
+                    path {
+                        fill: #B90303;
+                        transition: .3s ease;
+                    }
+                }
+            }
+
+        }
+
+        &__video {
+            display: flex;
+            justify-content: center;
+            max-width: 438px;
+            max-height: 584px;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        &__image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 438px;
+            max-height: 584px;
+            img {
+                z-index: 1000;
+                max-width: 100%;
+            }
+            svg {
+                cursor: pointer;
+                position: absolute;
+                max-width: 100%;
+                bottom: -67px;
+                right: -67px;
+                z-index: 1001;
+                &:hover {
+                    circle {
+                        stroke: #FC0000;
+                    }
+                    path {
+                        fill: #FC0000;
+                        &:nth-child(2){
+                            stroke: #FC0000;
+                            fill: transparent;
+                        }
+                        &:nth-child(3){
+                            stroke: #FC0000;
+                            fill: transparent;
+                        }
+                    }
+                }
+                &:active {
+                    circle {
+                        stroke: #B90303;
+                        transition: .3s ease;
+                    }
+                    path {
+                        fill: #B90303;
+                        transition: .3s ease;
+                        &:nth-child(2){
+                            stroke: #B90303;
+                            fill: transparent;
+                        }
+                        &:nth-child(3){
+                            stroke: #B90303;
+                            fill: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .text {
+        position: absolute;
+        left: 0;
+    }
+}
